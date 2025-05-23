@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp QR Code</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Scan to Chat on WhatsApp</h1>
+  <p>Open WhatsApp and scan the QR code below to start a chat with me.</p>
+
+  <div id="qrcode"></div>
+
+  <script>
+    const whatsappLink = "https://wa.me/1234567890"; // Replace with your phone number
+    QRCode.toCanvas(document.getElementById("qrcode"), whatsappLink, function (error) {
+      if (error) console.error(error);
+    });
+  </script>
+
+</body>
+</html>
